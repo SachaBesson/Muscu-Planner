@@ -7,3 +7,5 @@ __pycache__/
 .venv/
 data/*.csv
 !data/.gitkeep
+claude.md
+backlog.md
