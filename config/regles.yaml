@@ -1,0 +1,61 @@
+fenetres:
+  stimulus_jours: 12
+  demi_vie_stimulus_j: 6.5
+  norm_stimulus: 1.24
+  demi_vie_fatigue_h: 24
+  systemique_jours: 3
+seuils:
+  jours_repos_min: 2
+  # Delai distinct pour la FAMILLE (meme signature de sous-groupes) : refaire
+  # Leg Press deux jours apres un Hack Squat, c'est le meme mouvement.
+  jours_repos_famille: 4
+  jours_sans_travail_max: 4
+  fatigue_bloquante: 4.0
+  horizon_protection_h: 36
+  seuil_protection: 1.5
+  peremption_proposition_j: 5
+seance:
+  min_par_exo: 8
+  series_par_exo: 3
+  max_par_sous_groupe: 2
+  # V1 : l'equilibre pousse/tirage n'est PLUS une contrainte. Il decoule
+  # mecaniquement des cibles par sous-groupe — l'imposer en plus revenait a
+  # compter deux fois la meme chose, et produisait des exercices ajoutes pour
+  # remplir un tableau. Il reste suivi comme KPI dans le dashboard.
+  #
+  # Seule contrainte de forme : une seance doit rester COMPLETE. Trois ou
+  # quatre exercices de jambes, ce n'est plus du full body.
+  max_par_region: {jambes: 2, poussee: 3, tirage: 3}
+  taille_shortlist: 18
+  quotas: {}
+# Toute regle NOUVELLE doit etre une contrainte, pas un poids.
+poids: {deficit: 3.0, couverture: 1.4, fraicheur: 0.6, preference: 1.8, fatigue: 2.5}
+# Au-dela de ce ratio, un sous-groupe est en SURPLUS et penalise activement.
+# Sans plafond, un sous-groupe a 149% a juste un deficit nul : rien ne le
+# retire de la selection, il repasse des que sa note est bonne.
+plafond_ratio: 1.25
+poids_surplus: 2.0
+note_min: 3.0
+note_max: 10.0
+sg_majeurs: [Pectoraux, Dorsaux, Quadriceps, Epaules laterales,
+             Milieu du dos, Ischios, Triceps, Biceps]
+axes:
+  Pectoraux: poussee
+  Epaules anterieures: poussee
+  Triceps: poussee
+  Dorsaux: tirage
+  Milieu du dos: tirage
+  Arriere d'epaule: tirage
+  Trapezes: tirage
+  Biceps: tirage
+  Brachial: tirage
+  Quadriceps: jambes
+  Ischios: jambes
+  Fessiers: jambes
+  Mollets: jambes
+  Moyen fessier: jambes
+  Adducteurs: jambes
+  Lombaires: jambes
+  Epaules laterales: autre
+  Avant-bras: autre
+feedback: {delta: 0.2, occurrences_min: 3, plafond_mensuel: 1.0}

@@ -1,0 +1,19 @@
+# Series ponderees visees par semaine, calibrees sur ~3 seances/semaine
+# et sur l'analyse des 96 seances de juillet 2025 a septembre 2026.
+cibles:
+  Pectoraux: 8
+  Dorsaux: 8
+  Epaules laterales: 6
+  Triceps: 6
+  Milieu du dos: 5
+  Biceps: 5
+  Arriere d'epaule: 4
+  Epaules anterieures: 4
+  Quadriceps: 7
+  Ischios: 6
+  Fessiers: 3
+  Brachial: 2
+
+# Suivis dans les dashboards mais exclus du calcul d'exigence :
+# ni au numerateur, ni au denominateur du score de deficit.
+suivis_sans_cible: [Trapezes, Mollets, Avant-bras, Lombaires, Moyen fessier]

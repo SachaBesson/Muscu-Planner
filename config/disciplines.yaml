@@ -1,0 +1,29 @@
+# Coefficients POUR 30 MINUTES A RPE 7, mis a l'echelle par duree x intensite.
+#   stimulus = series ponderees equivalentes (volontairement faible : courir
+#              ne construit pas de muscle, ca le fatigue)
+#   fatigue  = points de fatigue locale, demi-vie 24 h
+# Estimations a regler apres quelques propositions.
+course:
+  systemique: 1.0
+  stimulus: {Mollets: 0.5, Ischios: 0.3, Quadriceps: 0.2, Fessiers: 0.2}
+  fatigue: {Mollets: 2.5, Ischios: 2.0, Quadriceps: 1.5, Fessiers: 1.0, Lombaires: 0.5}
+crossfit:
+  systemique: 1.5
+  stimulus: {Quadriceps: 2.0, Fessiers: 2.0, Ischios: 1.5, Dorsaux: 1.5,
+             Epaules anterieures: 1.5, Triceps: 1.5, Lombaires: 1.5,
+             Avant-bras: 1.5, Milieu du dos: 1.0, Epaules laterales: 1.0,
+             Pectoraux: 1.0, Biceps: 1.0, Mollets: 1.0}
+  fatigue: {Quadriceps: 2.5, Fessiers: 2.5, Ischios: 2.0, Lombaires: 2.0,
+            Avant-bras: 2.0, Dorsaux: 1.5, Epaules anterieures: 1.5,
+            Triceps: 1.5, Mollets: 1.5}
+natation:
+  systemique: 0.8
+  stimulus: {Dorsaux: 0.5, Epaules anterieures: 0.4, Triceps: 0.4,
+             Milieu du dos: 0.3, Arriere d'epaule: 0.3, Avant-bras: 0.2}
+  fatigue: {Dorsaux: 1.5, Epaules anterieures: 1.5, Arriere d'epaule: 1.0,
+            Milieu du dos: 1.0, Triceps: 1.0}
+
+# Multiplicateur de fatigue selon le ressenti declare.
+# Correctif du 13/09 : 4 km ne devrait pas mettre en courbatures,
+# seul ton retour peut l'apprendre au modele.
+ressenti: {frais: 0.8, normal: 1.0, fatigue: 1.4, courbatures: 2.0}

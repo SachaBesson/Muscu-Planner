@@ -1,0 +1,9 @@
+.env
+.env.example
+sa-key.json
+*-key.json
+__pycache__/
+*.pyc
+.venv/
+data/*.csv
+!data/.gitkeep
